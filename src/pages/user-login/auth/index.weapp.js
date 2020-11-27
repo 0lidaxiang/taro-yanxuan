@@ -8,7 +8,7 @@ export default class AUth extends Component {
       const { errMsg, userInfo } = res
       if (errMsg === 'getUserInfo:ok') {
         Taro.showToast({
-          title: `微信昵称: ${userInfo.nickName}，请使用邮箱登录`,
+          title: `微信昵称: ${userInfo.nickName}，请使用手机登录`,
           icon: 'none'
         })
       } else {
@@ -20,14 +20,14 @@ export default class AUth extends Component {
     })
   }
 
-  render () {
-    return (
-      <ButtonItem
-        type='primary'
-        text='微信登录'
-        openType='getUserInfo'
-        onGetUserInfo={this.agreeAuth}
-      />
-    )
-  }
+  // render () {
+  //   return (
+  //     <ButtonItem
+  //       type='primary'
+  //       text='微信登录'
+  //       openType='getUserInfo'
+  //       onGetUserInfo={this.agreeAuth}
+  //     />
+  //   )
+  // }
 }

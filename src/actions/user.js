@@ -22,6 +22,7 @@ export const dispatchUser = payload => createAction({
  */
 export const dispatchLogin = payload => createAction({
   url: API_USER_LOGIN,
+  method: "POST",
   type: USER_LOGIN,
   payload
 })

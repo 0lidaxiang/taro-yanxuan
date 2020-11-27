@@ -8,9 +8,9 @@ import { CDN } from '@constants/api'
 import './user-login-email.scss'
 
 const LOGO = `${CDN}/6dbf208804386f12aa9e662d82abe563.png`
-const EMAIL_SUFFIX = [
-  '163.com', '126.com', 'yeah.net', 'vip.163.com', 'vip.126.com'
-]
+// const EMAIL_SUFFIX = [
+//   '163.com', '126.com', 'yeah.net', 'vip.163.com', 'vip.126.com'
+// ]
 
 @connect(state => state.user, actions)
 class UserLoginEmail extends Component {
@@ -25,13 +25,13 @@ class UserLoginEmail extends Component {
     loading: false
   }
 
-  componentDidMount() {
-    Taro.showToast({
-      title: '注意，严选小程序的登录有变动，目前无法正常登录',
-      icon: 'none',
-      duration: 5000
-    })
-  }
+  // componentDidMount() {
+  //   Taro.showToast({
+  //     title: '注意，严选小程序的登录有变动，目前无法正常登录',
+  //     icon: 'none',
+  //     duration: 5000
+  //   })
+  // }
 
   handleInput = (key, value) => {
     this.setState({ [key]: value })
@@ -52,7 +52,7 @@ class UserLoginEmail extends Component {
   handleLogin = () => {
     const payload = {
       username: this.state.username,
-      password: md5(this.state.password)
+      password: this.state.password,
     }
     this.setState({ loading: true })
     this.props.dispatchLogin(payload).then(() => {
@@ -80,7 +80,7 @@ class UserLoginEmail extends Component {
         <View className='user-login-email__wrap'>
           <InputItem
             value={username}
-            placeholder='邮箱账号'
+            placeholder='手机号码'
             onInput={this.handleInput.bind(this, 'username')}
           />
           <InputItem
@@ -89,7 +89,7 @@ class UserLoginEmail extends Component {
             placeholder='密码'
             onInput={this.handleInput.bind(this, 'password')}
           />
-          {isShowSuggest &&
+          {/* {isShowSuggest &&
             <View className='user-login-email__suggest'>
               {EMAIL_SUFFIX.map((suffix) => {
                 const name = username.split('@')[0]
@@ -105,7 +105,7 @@ class UserLoginEmail extends Component {
                 )
               })}
             </View>
-          }
+          } */}
         </View>
         <View className='user-login-email__btn'>
           <ButtonItem

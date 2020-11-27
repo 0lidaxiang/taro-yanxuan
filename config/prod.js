@@ -1,6 +1,7 @@
 const isH5 = process.env.CLIENT_ENV === 'h5'
 
-const HOST = '"https://miniapp.you.163.com"'
+// const HOST = '"https://miniapp.you.163.com"'
+const HOST = '"http://127.0.0.1:8000"'
 const HOST_M = '"https://m.you.163.com"'
 
 // XXX 搭了个 proxy 用于演示 prod 环境的 H5

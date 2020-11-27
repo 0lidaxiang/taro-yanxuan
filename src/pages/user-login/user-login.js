@@ -51,16 +51,16 @@ class UserLogin extends Component {
         <Auth />
         <ButtonItem
           plain
-          text='邮箱账号登录'
+          text='手机账号登录'
           compStyle={BUTTON}
-          onClick={this.handleClick.bind(this, 'email')}
+          onClick={this.handleClick.bind(this, 'username')}
         />
-        <ButtonItem
+        {/* <ButtonItem
           plain
           text='手机号登录'
           compStyle={BUTTON}
           onClick={this.handleClick.bind(this, 'telephone')}
-        />
+        /> */}
         <View className='user-login__reg'>
           <Text className='user-login__reg-txt'>
             {'手机号快捷注册>'}

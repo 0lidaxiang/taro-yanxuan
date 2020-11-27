@@ -22,7 +22,7 @@ const RECOMMEND_SIZE = 20
 @connect(state => state.home, { ...actions, dispatchCartNum })
 class Home extends Component {
   config = {
-    navigationBarTitleText: '网易严选'
+    navigationBarTitleText: '520fans'
   }
 
   state = {

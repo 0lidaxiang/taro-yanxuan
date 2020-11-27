@@ -31,7 +31,8 @@ export const API_CART_UPDATE_CHECK = `${host}/xhr/promotionCart/updateCheck.json
 
 // user
 export const API_USER = `${host}/xhr/user/getDetail.json`
-export const API_USER_LOGIN = `${host}/xhr/u/mailLogin.json`
+// export const API_USER_LOGIN = `${host}/xhr/u/mailLogin.json`
+export const API_USER_LOGIN = `${host}/api/v1/token_login/userLogin`
 export const API_CHECK_LOGIN = `${host}/xhr/u/checkLogin.json`
 
 // item
